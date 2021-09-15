@@ -1,18 +1,24 @@
 name: Sync Gitee Repository To Github
 
+on:
+  schedule:
+    - cron:  '* */6 * * *'
+
 jobs:
   build:
     runs-on: ubuntu-20.04
     steps:
+
     - name: Sync Gitee Repository To Github
       uses: Yikun/hub-mirror-action@master
       with:
-        src: gitee/Yanhu1
+        src: gitee/cuc-ccs
         dst: github/YanhuiJessica
-        dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
-        dst_token:  ${{ secrets.GITEE_TOKEN }}
+        dst_key: ${{ secrets.SYNC_PRIVATE_KEY }}
+        dst_token:  ${{ secrets.SYNC_TOKEN }}
         account_type: user
         clone_style: "ssh"
         force_update: true
+        debug: true
         mappings: "CS-Yanhu1-2021=>CS-YanhuiJessica-2021"
-        white_list: "CS-Yanhu1-2021"
+        static_list: "CS-Yanhu1-2021"
