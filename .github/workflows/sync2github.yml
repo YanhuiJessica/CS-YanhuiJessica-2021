@@ -20,5 +20,5 @@ jobs:
         clone_style: "ssh"
         force_update: true
         debug: true
-        mappings: "CS-Yanhu1-2021=>CS-YanhuiJessica-2021"
-        static_list: "CS-Yanhu1-2021"
+        mappings: "cs-yanhu1-2021=>CS-YanhuiJessica-2021"
+        static_list: "cs-yanhu1-2021"
