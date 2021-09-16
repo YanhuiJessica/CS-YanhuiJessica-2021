@@ -19,6 +19,5 @@ jobs:
         account_type: user
         clone_style: "ssh"
         force_update: true
-        debug: true
         mappings: "cs-yanhu1-2021=>CS-YanhuiJessica-2021"
         static_list: "cs-yanhu1-2021"
