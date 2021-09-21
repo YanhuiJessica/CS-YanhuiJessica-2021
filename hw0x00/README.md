@@ -19,6 +19,14 @@
 - `git stash pop` 在应用后丢弃储存的变更，而 `git stash apply` 只应用不丢弃储存的变更
 - 可以认为 `git stash pop` 是 `git stash apply && git stash drop`
 
+### 版本回退
+
+```bash
+git reset [--hard | --soft] [<commit>]
+# --hard: 慎用，回退并丢弃指定 commit 之后的所有变更
+# --soft: 回退并保留变更，只移动了 HEAD 的指向
+```
+
 ## Gitee 自动同步到 Github
 
 - 在 Github 新建用于同步的仓库
@@ -55,6 +63,8 @@
 
 ## 参考资料
 
+- [Git - Reset Demystified](https://git-scm.com/book/en/v2/Git-Tools-Reset-Demystified)
+- [How can I delete a commit in Git? | Learn Version Control with Git](https://www.git-tower.com/learn/git/faq/delete-commits/)
 - [Yikun/hub-mirror-action](https://github.com/Yikun/hub-mirror-action)
   - [同步时，Github和Gitee的仓库名可否不同？](https://github.com/Yikun/hub-mirror-action/issues/64#issuecomment-900877883)
   - [gitee向github同步失败](https://github.com/Yikun/hub-mirror-action/issues/121)
