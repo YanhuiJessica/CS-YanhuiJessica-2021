@@ -54,7 +54,7 @@
 - 摩斯编码：`-... -.-`
 - ASCII 码、二进制编码、十六进制编码
 - Base64：大小写字母各 26 个、10 个数字、`+`、`/`，`=` 作为填充字符
-- ROT13：简易单表代换，$C \equiv (M+13) \, mod \, 26$
+- ROT13：简易单表代换，$ C \equiv (M+13) \ mod \ 26 $
 - 条形码、二维码
 - [Modular conversion, encoding and encryption online — Cryptii](https://cryptii.com/)
 
