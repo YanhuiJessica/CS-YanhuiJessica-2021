@@ -56,11 +56,14 @@
 - Base64：大小写字母各 26 个、10 个数字、`+`、`/`，`=` 作为填充字符
 - ROT13：简易单表代换，$ C \equiv (M+13) \ mod \ 26 $
 - 条形码、二维码
-- [Modular conversion, encoding and encryption online — Cryptii](https://cryptii.com/)
+- 在线工具
+  - [CyberChef](https://gchq.github.io/CyberChef/)
+  - [Modular conversion, encoding and encryption online — Cryptii](https://cryptii.com/)
 
 ### 例题
 
 - [Stegano50](challenges/stegano50.pdf)
+  - 透明颜色达到视觉隐藏的目的
 
 ## 数字取证 && 隐写分析
 
