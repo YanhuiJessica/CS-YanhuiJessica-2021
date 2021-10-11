@@ -1,0 +1,8 @@
+---
+koalas:
+  build: ./
+  environment:
+    - FLAG=actf{koalas_to_the_max}
+  restart: always
+  ports:
+    - 6363:80

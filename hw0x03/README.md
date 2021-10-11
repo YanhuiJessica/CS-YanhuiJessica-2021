@@ -119,6 +119,42 @@
 - 赛客夏令营2017 - 机密信息<br>
 ![机密信息](img/secret-info.jpg)
 
+## 原创题目
+
+### MISC - Koalas Dots
+
+- 灵感来源：[vogievetsky/KoalasToTheMax](https://github.com/vogievetsky/KoalasToTheMax)
+- 容器地址：[yanhui22/koalas-dots](https://hub.docker.com/repository/docker/yanhui22/koalas-dots)
+- 防绕过措施 🤐
+  - 每个点达到最小直径时，从服务器获取该点对应的随机值
+    - 优化：每个点达到**第二**小直径时，从服务器获取该点分裂后其中一个子点的随机值，其它子点继承该值
+  - 当所有点都达到最小直径时，需要向服务器确认各个点的随机值，以解锁下一张图
+  - CSRF token
+- 防手工解题 🤗
+  - session 生命周期 30 分钟
+
+![考拉点点](img/koalas-dots.jpg)
+
+![成功获取 Flag](img/koalas-dots-flag.jpg)
+
+#### 遇到问题与解决
+
+- 点未完成分裂就提交请求到后端，导致坐标为浮点数
+  - JS 异步，先执行分裂相关的前端代码
+    ```js
+    SetsetTimeout( () => {提交请求相关函数}, 1000);
+    ```
+- Flag 为空
+  - `entrypoint.sh` 在每次启动容器时运行，放置替换 Flag 的相关命令
+
+#### 参考资料
+
+- [tiangolo/uwsgi-nginx-flask-docker](https://github.com/tiangolo/uwsgi-nginx-flask-docker)
+- [Flask-Session](https://flask-session.readthedocs.io/en/latest/)
+- [CSRF Protection — Flask-WTF Documentation (0.15.x)](https://flask-wtf.readthedocs.io/en/0.15.x/csrf/)
+- [如何正确使用Docker出一道CTF题目](https://www.v0n.top/2020/05/01/%E5%A6%82%E4%BD%95%E6%AD%A3%E7%A1%AE%E4%BD%BF%E7%94%A8Docker%E5%87%BA%E4%B8%80%E9%81%93CTF%E9%A2%98%E7%9B%AE/)
+- [Deploying Challenges | CTFd](https://docs.ctfd.io/tutorials/deploying-challenges/)
+
 ## 参考资料
 
 - [杂项简介 - CTF Wiki](https://ctf-wiki.org/misc/introduction/)
