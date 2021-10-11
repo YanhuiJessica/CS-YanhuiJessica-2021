@@ -121,7 +121,7 @@
 
 ## 原创题目
 
-### MISC - Koalas Dots
+### Koalas Dots
 
 - 灵感来源：[vogievetsky/KoalasToTheMax](https://github.com/vogievetsky/KoalasToTheMax)
 - 容器地址：[yanhui22/koalas-dots](https://hub.docker.com/repository/docker/yanhui22/koalas-dots)
@@ -134,6 +134,8 @@
   - session 生命周期 30 分钟
 
 ![考拉点点](img/koalas-dots.jpg)
+
+能够获得 Flag
 
 ![成功获取 Flag](img/koalas-dots-flag.jpg)
 
