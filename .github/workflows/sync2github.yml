@@ -1,8 +1,8 @@
 name: Sync Gitee Repository To Github
 
 on:
-  schedule:
-    - cron:  '0 */6 * * *'
+  push:
+    branches: [master hw0x00 hw0x01 hw0x02]
 
 jobs:
   build:
